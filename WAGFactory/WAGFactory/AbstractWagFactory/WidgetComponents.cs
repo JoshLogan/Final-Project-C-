@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AbstractWAGFactory
+namespace AbstractWagFactory
 {
     public class WidgetComponents : IWidgetComponents
     {

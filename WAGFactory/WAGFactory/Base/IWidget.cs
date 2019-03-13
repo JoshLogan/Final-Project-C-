@@ -8,9 +8,9 @@ namespace WAGFactory
 {
     public interface IWidget
     {
-        int NumberOf { get; }
+        ISize GetSize { get; }
 
-        bool IsSmall { get; }
+        int NumberOf { get; }
 
         FinishColor ColorType { get; }
 

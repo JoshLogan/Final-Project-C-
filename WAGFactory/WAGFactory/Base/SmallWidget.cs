@@ -12,10 +12,20 @@ namespace WAGFactory
         {
         }
 
-        public SmallWidget(ISize size, FinishColor finish) : base(size, finish)
+        public SmallWidget(int numberOf, FinishColor finish) : base(numberOf, finish)
         {
+            Console.WriteLine("The small widget has 2 gears");
+            Console.WriteLine("The small widget has 3 springs");
+            Console.WriteLine("The small widget has  1 lever");
+            Console.WriteLine("The small widget has a finish of " + finish);
         }
 
         public override decimal Price { get; } = 540.00m;
+
+
+        public override string ToString()
+        {
+            return NumberOf + " " + this.GetType().Name + " created!";
+        }
     }
 }

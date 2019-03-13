@@ -8,6 +8,7 @@ namespace WAGFactory
 {
     public interface ISize
     {
-        bool IsSmall { get; }
+        string Size { get; }
+
     }
 }

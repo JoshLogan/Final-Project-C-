@@ -3,47 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AbstractWAGFactory;
+using AbstractWagFactory;
 
 namespace WAGFactory
 {
     public abstract class AbstractWidget : IWidget
     {
-        private ISize size;
-        private FinishColor finish;
-        private int _numberOf;
-        private bool _isSmall;
+        private ISize _size;
+
         public abstract decimal Price { get; }
 
-        public FinishColor ColorType { get { return finish; } }
+        public FinishColor ColorType { get; }
 
-        public int NumberOf
-        {
-            get
-            {
-                return _numberOf;
-            }
-        }
-        public bool IsSmall
-        {
-            get
-            {
-                return _isSmall;
-            }
-        }
-        public AbstractWidget(ISize size, FinishColor finish)
-        {
-            this.finish = finish;
-            this.size = size;
-        }
-        public AbstractWidget(int numberOf)
-        {
-            this._numberOf = numberOf;
+        public int NumberOf { get; }
+        public abstract ISize GetSize { get; }
 
+        public AbstractWidget(FinishColor finish, ISize size)
+        {
+            this._size = size;
         }
+        public AbstractWidget(int numberOf) : this(numberOf, FinishColor.PlainBlack)
+        {
+            this.NumberOf = numberOf;
+        }
+
+        public AbstractWidget(int numberOf, FinishColor finish)
+        {
+            this.NumberOf = numberOf;
+        }
+
         public override string ToString()
         {
-            return this.GetType().Name + " with " + _numberOf + " gears.";
+            return NumberOf + " " + this.GetType().Name + " created!";
         }
 
         public void Paint(FinishColor finish)

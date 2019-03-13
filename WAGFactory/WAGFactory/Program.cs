@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AbstractWAGFactory;
+using WAGFactory;
+using AbstractWagFactory;
 using Builder;
 
 namespace WAGFactory
@@ -12,13 +13,23 @@ namespace WAGFactory
     {
         static void Main(string[] args)
         {
-            AbstractWagDemo();
-            BuilderPatternDemo();
+            //AbstractWagDemo();
+            //BuilderPatternDemo();
+            SmallWidget();
+        }
+
+        private static void SmallWidget()
+        {
+            AbstractWidget widget = new SmallWidget(3, FinishColor.GoldPlated);
+            WagBuilder builder = new WidgetBuilder(widget);
+            WagDirector director = new WidgetDirector();
+            IWidget smallWidget = director.Build(builder);
+            Console.WriteLine(smallWidget);
         }
 
         private static void BuilderPatternDemo()
         {
-            AbstractWidget abstractWidget = new SmallWidget(2);
+            AbstractWidget abstractWidget = new SmallWidget(3, FinishColor.GoldPlated);
             WagBuilder wagBuilder = new WidgetBuilder(abstractWidget);
             WagDirector wagDirector = new WidgetDirector();
             IWidget widget = wagDirector.Build(wagBuilder);
@@ -27,7 +38,7 @@ namespace WAGFactory
 
         private static void AbstractWagDemo()
         {
-            AbstractWAGFactory.AbstractWAGFactory factory = new WidgetFactory();
+            AbstractWAGFactory factory = new WidgetFactory();
             IWidgetComponents widgetComponents = factory.CreateWidgetComponents();
             Console.WriteLine(widgetComponents.GearParts);
             Console.WriteLine(widgetComponents.SpringParts);

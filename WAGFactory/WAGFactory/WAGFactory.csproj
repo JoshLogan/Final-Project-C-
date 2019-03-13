@@ -47,6 +47,7 @@
     <Compile Include="AbstractWagFactory\IWidgetComponents.cs" />
     <Compile Include="AbstractWagFactory\WidgetComponents.cs" />
     <Compile Include="AbstractWagFactory\WidgetFactory.cs" />
+    <Compile Include="Base\AbstractSize.cs" />
     <Compile Include="Base\AbstractWidget.cs" />
     <Compile Include="Base\FinishColor.cs" />
     <Compile Include="Base\ISize.cs" />
