@@ -1,0 +1,70 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using AbstractWagFactory;
+
+namespace WAGFactory
+{
+    public abstract class AbstractWidget : IWidget
+    {
+        private ISize _size;
+
+        private FinishColor _typeColor;
+
+        public FinishColor TypeColor
+        {
+            get
+            {
+                return _typeColor;
+            }
+        }
+
+        public ISize Size
+        {
+            get
+            {
+                return _size;
+            }
+        }
+
+        public abstract decimal Price { get; }
+
+        public AbstractWidget(FinishColor color, ISize size)
+        {
+            this._typeColor = color;
+            this._size = size;
+        }
+
+        public virtual void Paint(FinishColor color)
+        {
+            this._typeColor = color;
+        }
+
+        public override string ToString()
+        {
+            return this.GetType().Name + ": Widget Color is " + _typeColor + "and the Price is $" + Price;
+        }
+
+        public virtual void CleanWidget()
+        {
+           Console.WriteLine("Cleaning widget . . .");
+        }
+
+        public virtual void InstallWidget()
+        {
+            Console.WriteLine("Installing widget . . . ");
+        }
+
+        public virtual void PrepWidget()
+        {
+            Console.WriteLine("Preping widget . . . ");
+        }
+
+        public virtual void TestWidget()
+        {
+            Console.WriteLine("Testing Widget . . . ");
+        }
+    }
+}

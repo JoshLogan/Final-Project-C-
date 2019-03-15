@@ -9,6 +9,6 @@ namespace Builder
 {
     public abstract class WagDirector
     {
-        public abstract IWidget Build(WagBuilder wagBuilder);
+        public abstract IWag Build(WagBuilder wagBuilder);
     }
 }

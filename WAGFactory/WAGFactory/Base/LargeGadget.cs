@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace WAGFactory
 {
-    public class SmallWidget : AbstractWidget
+    class LargeGadget : AbstractGadget
     {
-        public SmallWidget()
+        public LargeGadget()
         {
         }
 
-        public SmallWidget(ISize size) : base(size)
+        public LargeGadget(ISize size) : base(size)
         {
         }
 
-        public SmallWidget(ISize size, FinishColor color) : base(size, color)
+        public LargeGadget(ISize size, FinishColor color) : base(size, color)
         {
         }
 
@@ -28,11 +28,5 @@ namespace WAGFactory
         {
             base.Paint(color);
         }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
-
     }
 }

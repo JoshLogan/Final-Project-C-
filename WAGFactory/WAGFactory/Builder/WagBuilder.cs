@@ -9,7 +9,7 @@ namespace Builder
 {
     public abstract class WagBuilder
     {
-        public abstract IWidget Widget { get; }
+        public abstract IWag Widget { get; }
         public virtual void BuildWidgetParts() { }
 
     }

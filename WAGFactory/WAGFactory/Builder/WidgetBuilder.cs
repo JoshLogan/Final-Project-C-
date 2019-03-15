@@ -11,7 +11,7 @@ namespace Builder
     {
         private AbstractWidget _abstractWidgetInProgress;
 
-        public override IWidget Widget
+        public override IWag Widget
         {
             get
             {

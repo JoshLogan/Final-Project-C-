@@ -9,7 +9,7 @@ namespace Builder
 {
     class WidgetDirector : WagDirector
     {
-        public override IWidget Build(WagBuilder wagBuilder)
+        public override IWag Build(WagBuilder wagBuilder)
         {
             wagBuilder.BuildWidgetParts();
 

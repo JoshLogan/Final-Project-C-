@@ -8,9 +8,9 @@ namespace WAGFactory
 {
     class AbstractSize : ISize
     {
-        private string _size;
+        private int _size;
 
-        public string Size
+        public int Size
         {
             get
             {
@@ -18,9 +18,9 @@ namespace WAGFactory
             }
         }
 
-        public AbstractSize(string size)
+        public AbstractSize(int size)
         {
-            this._size = size;
+            _size = size;
         }
 
         public override string ToString()

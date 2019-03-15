@@ -20,10 +20,10 @@ namespace WAGFactory
 
         private static void SmallWidget()
         {
-            AbstractWidget widget = new SmallWidget(3, FinishColor.GoldPlated);
+            AbstractWidget widget = new SmallWidget(4, "Medium");
             WagBuilder builder = new WidgetBuilder(widget);
             WagDirector director = new WidgetDirector();
-            IWidget smallWidget = director.Build(builder);
+            IWag smallWidget = director.Build(builder);
             Console.WriteLine(smallWidget);
         }
 
@@ -32,7 +32,7 @@ namespace WAGFactory
             AbstractWidget abstractWidget = new SmallWidget(3, FinishColor.GoldPlated);
             WagBuilder wagBuilder = new WidgetBuilder(abstractWidget);
             WagDirector wagDirector = new WidgetDirector();
-            IWidget widget = wagDirector.Build(wagBuilder);
+            IWag widget = wagDirector.Build(wagBuilder);
             Console.WriteLine(widget);
         }
 

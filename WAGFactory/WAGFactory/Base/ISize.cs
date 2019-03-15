@@ -8,7 +8,7 @@ namespace WAGFactory
 {
     public interface ISize
     {
-        string Size { get; }
+        int Size { get; }
 
     }
 }

@@ -47,18 +47,34 @@
     <Compile Include="AbstractWagFactory\IWidgetComponents.cs" />
     <Compile Include="AbstractWagFactory\WidgetComponents.cs" />
     <Compile Include="AbstractWagFactory\WidgetFactory.cs" />
+    <Compile Include="Base\AbstractGadget.cs" />
     <Compile Include="Base\AbstractSize.cs" />
+    <Compile Include="Base\AbstractWag.cs" />
     <Compile Include="Base\AbstractWidget.cs" />
     <Compile Include="Base\FinishColor.cs" />
     <Compile Include="Base\ISize.cs" />
-    <Compile Include="Base\IWidget.cs" />
+    <Compile Include="Base\IWag.cs" />
+    <Compile Include="Base\LargeGadget.cs" />
+    <Compile Include="Base\LargeWidget.cs" />
+    <Compile Include="Base\MediumGadget.cs" />
+    <Compile Include="Base\MediumWidget.cs" />
+    <Compile Include="Base\SmallGadget.cs" />
     <Compile Include="Base\SmallWidget.cs" />
     <Compile Include="Builder\WagDirector.cs" />
     <Compile Include="Builder\WagBuilder.cs" />
     <Compile Include="Builder\WidgetBuilder.cs" />
     <Compile Include="Builder\WidgetDirector.cs" />
+    <Compile Include="Decorator\AbstractWagOption.cs" />
+    <Compile Include="Decorator\CustomComponentsOption.cs" />
+    <Compile Include="Decorator\EverythingGoldOption.cs" />
+    <Compile Include="Facade\WagDocumentation.cs" />
+    <Compile Include="Facade\WagFacade.cs" />
+    <Compile Include="Facade\WagRegistration.cs" />
+    <Compile Include="Iterator\GadgetRange.cs" />
+    <Compile Include="Iterator\WidgetRange.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Singleton\SerialNumberGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
