@@ -18,6 +18,9 @@ namespace Builder
                 return _abstractWidgetInProgress;
             }
         }
+
+        public override IWag Gadget => throw new NotImplementedException();
+
         public WidgetBuilder(AbstractWidget widget)
         {
             this._abstractWidgetInProgress = widget;

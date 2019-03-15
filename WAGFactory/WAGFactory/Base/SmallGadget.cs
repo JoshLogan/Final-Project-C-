@@ -22,7 +22,7 @@ namespace WAGFactory
         {
         }
 
-        public override ISize Size => throw new NotImplementedException();
+
 
         public override decimal Price => base.Price;
 

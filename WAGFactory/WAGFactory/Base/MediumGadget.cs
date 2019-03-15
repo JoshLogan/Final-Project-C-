@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WAGFactory
 {
-    class MediumGadget : AbstractGadget
+    public class MediumGadget : AbstractGadget
     {
         public MediumGadget()
         {
@@ -20,7 +20,7 @@ namespace WAGFactory
         {
         }
 
-        public override ISize Size => throw new NotImplementedException();
+
 
         public override decimal Price => base.Price;
 

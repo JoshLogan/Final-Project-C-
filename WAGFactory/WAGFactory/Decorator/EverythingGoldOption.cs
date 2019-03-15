@@ -17,7 +17,7 @@ namespace Decorator
             }
         }
 
-        public override ISize Size => throw new NotImplementedException();
+
 
         public EverythingGoldOption(IWag wag) : base(wag)
         {

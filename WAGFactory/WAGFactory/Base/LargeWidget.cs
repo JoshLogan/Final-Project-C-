@@ -8,8 +8,28 @@ namespace WAGFactory
 {
     class LargeWidget : AbstractWidget
     {
+        private string _gearParts = " 9 Gears,";
+        private string _springParts = " 4 Springs.";
+        private string _leverParts = " 2 Levers,";
+
+        private FinishColor _color;
+
+        public FinishColor Color
+        {
+            get
+            {
+                return _color;
+            }
+        }
+
+
         public LargeWidget()
         {
+        }
+
+        public LargeWidget(FinishColor color)
+        {
+            _color = color;
         }
 
         public LargeWidget(ISize size) : base(size)
@@ -20,24 +40,21 @@ namespace WAGFactory
         {
         }
 
-        public override ISize Size => throw new NotImplementedException();
 
-        public override decimal Price => base.Price;
+
+        public new decimal Price = 8600.00m;
 
         public override void CleanWidget()
         {
-            base.CleanWidget();
+            Console.WriteLine("Cleaning Large Widget . . . ");
         }
 
         public override void InstallWidget()
         {
-            base.InstallWidget();
+            Console.WriteLine("Installing Large Widget . . .");
         }
 
-        public override void Paint(FinishColor color)
-        {
-            base.Paint(color);
-        }
+
 
         public override void PrepWidget()
         {
@@ -51,7 +68,7 @@ namespace WAGFactory
 
         public override string ToString()
         {
-            return base.ToString();
+            return this.GetType().Name + ": Widget with " + _gearParts + _leverParts + _springParts + " With a finish that is " + _color + " and priced at $" + Price;
         }
     }
 }

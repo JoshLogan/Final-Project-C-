@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace AbstractWagFactory
 {
-    class WidgetFactory : AbstractWAGFactory
+    public class GadgetFactory : AbstractWAGFactory
     {
         public override IGadgetComponents CreateGadgetComponents()
         {
-            throw new NotImplementedException();
+            return new GadgetComponents();
         }
 
         public override IWidgetComponents CreateWidgetComponents()
         {
-            return new WidgetComponents();
+            throw new NotImplementedException();
         }
     }
 }

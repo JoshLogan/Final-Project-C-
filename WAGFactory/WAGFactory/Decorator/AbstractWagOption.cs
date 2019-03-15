@@ -11,7 +11,7 @@ namespace Decorator
     {
         protected internal IWag decoratedWag;
 
-        public AbstractWagOption(IWag wag) : base(wag.Size, FinishColor.GoldPlated)
+        public AbstractWagOption(IWag wag) : base(FinishColor.GoldPlated)
         {
             this.decoratedWag = wag;
         }

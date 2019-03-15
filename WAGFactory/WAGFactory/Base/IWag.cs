@@ -8,7 +8,6 @@ namespace WAGFactory
 {
     public interface IWag
     {
-        ISize Size { get; }
 
         FinishColor TypeColor { get; }
 

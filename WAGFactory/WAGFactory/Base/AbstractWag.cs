@@ -29,7 +29,7 @@ namespace WAGFactory
         }
 
         public abstract decimal Price { get; }
-        public abstract ISize Size { get; }
+
 
         public AbstractWag(ISize size)
         {
@@ -77,8 +77,9 @@ namespace WAGFactory
             Console.WriteLine("Testing widget . . . ");
         }
 
-        protected AbstractWag()
+        public AbstractWag()
         {
+
         }
     }
 }

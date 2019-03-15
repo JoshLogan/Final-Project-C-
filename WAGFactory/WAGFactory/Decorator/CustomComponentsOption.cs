@@ -16,7 +16,7 @@ namespace Decorator
             }
         }
 
-        public override ISize Size => throw new NotImplementedException();
+
 
         public CustomComponentsOption(IWag wag) : base(wag)
         {

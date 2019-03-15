@@ -7,13 +7,15 @@ using WAGFactory;
 
 namespace Builder
 {
-    public class WidgetDirector : WagDirector
+    class GadgetDirector : WagDirector
     {
         public override IWag Build(WagBuilder wagBuilder)
         {
-            wagBuilder.BuildWidgetParts();
+            wagBuilder.BuildGadgetParts();
 
-            return wagBuilder.Widget;
+            return wagBuilder.Gadget;
         }
     }
+
+
 }

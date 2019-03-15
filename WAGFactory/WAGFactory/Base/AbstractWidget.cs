@@ -20,9 +20,38 @@ namespace WAGFactory
         {
 
         }
+        public AbstractWidget(FinishColor color) : base(color)
+        {
 
+        }
         protected AbstractWidget()
         {
         }
+
+        public override void CleanWidget()
+        {
+            base.CleanWidget();
+        }
+
+        public override void InstallWidget()
+        {
+            base.InstallWidget();
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
+        public override void PrepWidget()
+        {
+            base.PrepWidget();
+        }
+
+        public override void TestWidget()
+        {
+            base.TestWidget();
+        }
+
     }
 }

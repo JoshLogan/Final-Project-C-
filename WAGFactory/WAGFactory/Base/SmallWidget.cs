@@ -8,6 +8,19 @@ namespace WAGFactory
 {
     public class SmallWidget : AbstractWidget
     {
+        private string _gearParts = " 2 Gears,";
+        private string _springParts = " 3 Springs.";
+        private string _leverParts = " 1 Lever,";
+        private FinishColor _color;
+
+        public FinishColor Color
+        {
+            get
+            {
+                return _color;
+            }
+        }
+
         public SmallWidget()
         {
         }
@@ -18,11 +31,15 @@ namespace WAGFactory
 
         public SmallWidget(ISize size, FinishColor color) : base(size, color)
         {
+
         }
 
-        public override ISize Size => throw new NotImplementedException();
+        public SmallWidget(FinishColor color)
+        {
+            _color = color;
+        }
 
-        public override decimal Price => base.Price;
+        public new decimal Price = 3500.00m;
 
         public override void Paint(FinishColor color)
         {
@@ -31,7 +48,7 @@ namespace WAGFactory
 
         public override string ToString()
         {
-            return base.ToString();
+            return this.GetType().Name + ": Widget with " + _gearParts + _leverParts + _springParts + " With a finish that is " + _color + " and priced at $" + Price;
         }
 
     }

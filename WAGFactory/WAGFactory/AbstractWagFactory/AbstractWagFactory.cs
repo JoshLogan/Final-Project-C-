@@ -9,6 +9,6 @@ namespace AbstractWagFactory
     public abstract class AbstractWAGFactory
     {
         public abstract IWidgetComponents CreateWidgetComponents();
-
+        public abstract IGadgetComponents CreateGadgetComponents();
     }
 }
