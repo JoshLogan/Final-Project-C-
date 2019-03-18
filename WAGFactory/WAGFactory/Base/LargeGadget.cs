@@ -20,12 +20,12 @@ namespace WAGFactory
 
         public override decimal Price { get; } = 1100000.00m;
 
-        public LargeGadget(ISize size) : this(FinishColor.PlainBlack, size)
+        public LargeGadget(ISelectSize size) : this(FinishColor.PlainBlack, size)
         {
 
         }
 
-        public LargeGadget(FinishColor color, ISize size) : base(color, size)
+        public LargeGadget(FinishColor color, ISelectSize size) : base(color, size)
         {
 
         }

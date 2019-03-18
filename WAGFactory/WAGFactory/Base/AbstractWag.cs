@@ -9,14 +9,14 @@ namespace WAGFactory
     public abstract class AbstractWag : IWag
     {
         private FinishColor _finishColor;
-        private ISize _size;
+        private ISelectSize _size;
 
         public FinishColor ColorType
         {
             get { return _finishColor; }
         }
 
-        public ISize GetWagSize
+        public ISelectSize GetWagSize
         {
             get { return _size; }
         }
@@ -32,7 +32,7 @@ namespace WAGFactory
         public AbstractWag(FinishColor color)
         { this._finishColor = color; }
 
-        public AbstractWag(FinishColor color, ISize size)
+        public AbstractWag(FinishColor color, ISelectSize size)
         {
             this._finishColor = color;
             this._size = size;
@@ -47,8 +47,6 @@ namespace WAGFactory
         {
             return this.GetType().Name + ": With a Finish that is " + _finishColor + " and the Price is $" + Price;
         }
-
-
 
 
     }

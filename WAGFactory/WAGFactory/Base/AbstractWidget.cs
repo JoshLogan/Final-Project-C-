@@ -9,7 +9,7 @@ namespace WAGFactory
     public abstract class AbstractWidget : AbstractWag
     {
         private FinishColor _typeColor;
-        private ISize _size;
+        private ISelectSize _size;
 
 
         public FinishColor ColorType
@@ -19,7 +19,7 @@ namespace WAGFactory
                 return _typeColor;
             }
         }
-        public ISize GetWagSize
+        public ISelectSize GetWagSize
         {
             get
             {
@@ -32,7 +32,7 @@ namespace WAGFactory
 
         }
 
-        public AbstractWidget(FinishColor color, ISize size) : base(color, size)
+        public AbstractWidget(FinishColor color, ISelectSize size) : base(color, size)
         {
 
         }

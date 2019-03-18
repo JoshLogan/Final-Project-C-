@@ -29,7 +29,7 @@ namespace WAGFactory
 
         }
 
-        public MediumWidget(FinishColor color, ISize size) : base(color, size)
+        public MediumWidget(FinishColor color, ISelectSize size) : base(color, size)
         {
         }
 

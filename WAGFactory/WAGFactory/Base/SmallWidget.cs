@@ -29,7 +29,7 @@ namespace WAGFactory
 
         }
 
-        public SmallWidget(FinishColor color, ISize size) : base(color, size)
+        public SmallWidget(FinishColor color, ISelectSize size) : base(color, size)
         {
 
         }
@@ -44,7 +44,7 @@ namespace WAGFactory
 
         public override string ToString()
         {
-            return this.GetType().Name + ": Widget has " + _gearParts + _leverParts + _springParts + " with a finish that is " + _color + " and priced at $" + Price;
+            return this.GetType().Name + ": Has " + _gearParts + _leverParts + _springParts + " with a finish that is " + _color + " and priced at $" + Price;
         }
 
     }

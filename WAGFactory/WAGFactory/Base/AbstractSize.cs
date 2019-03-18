@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WAGFactory
 {
-    public class AbstractSize : ISize
+    public class AbstractSize : ISelectSize
     {
         private int _numberOf;
         private bool _isSmall;

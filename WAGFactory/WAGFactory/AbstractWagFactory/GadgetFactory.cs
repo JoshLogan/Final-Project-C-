@@ -16,6 +16,7 @@ namespace AbstractWagFactory
         public override IWidgetComponents CreateWidgetComponents()
         {
             throw new NotImplementedException();
+            //Gadget factory requesting widget factory.
         }
     }
 }

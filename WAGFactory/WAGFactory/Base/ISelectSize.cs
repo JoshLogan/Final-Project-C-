@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WAGFactory
 {
-    public interface ISize
+    public interface ISelectSize
     {
         int NumberOf { get; }
         bool IsSmall { get; }

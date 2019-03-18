@@ -55,12 +55,13 @@
     <Compile Include="Base\AbstractWag.cs" />
     <Compile Include="Base\AbstractWidget.cs" />
     <Compile Include="Base\FinishColor.cs" />
-    <Compile Include="Base\ISize.cs" />
+    <Compile Include="Base\ISelectSize.cs" />
     <Compile Include="Base\IWag.cs" />
     <Compile Include="Base\LargeGadget.cs" />
     <Compile Include="Base\LargeWidget.cs" />
     <Compile Include="Base\MediumGadget.cs" />
     <Compile Include="Base\MediumWidget.cs" />
+    <Compile Include="Base\SelectWagSize.cs" />
     <Compile Include="Base\SmallGadget.cs" />
     <Compile Include="Base\SmallSize.cs" />
     <Compile Include="Base\SmallWidget.cs" />

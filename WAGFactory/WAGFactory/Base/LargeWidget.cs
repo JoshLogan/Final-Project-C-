@@ -29,7 +29,7 @@ namespace WAGFactory
 
         }
 
-        public LargeWidget(FinishColor color, ISize size) : base(color, size)
+        public LargeWidget(FinishColor color, ISelectSize size) : base(color, size)
         {
 
         }

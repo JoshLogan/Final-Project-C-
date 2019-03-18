@@ -8,6 +8,7 @@ using AbstractWagFactory;
 using Builder;
 using Decorator;
 using Iterator;
+using Base;
 
 namespace WAGFactory
 {
@@ -15,12 +16,23 @@ namespace WAGFactory
     {
         static void Main(string[] args)
         {
-            AbstractWagDemo();
-            BuilderPatternDemo();
-            SmallWidget();
-            MediumWidget();
-            DecoratorPatternDemo();
+            //AbstractWagDemo();
+            //BuilderPatternDemo();
+            // SmallWidget();
+            // MediumWidget();
+            // DecoratorPatternDemo();
+            //  IteratorDemo();
+            SizeSelectDemo();
+        }
+
+        private static void SizeSelectDemo()
+        {
             IteratorDemo();
+
+
+            SelectWagSize sws = new SelectWagSize();
+            sws.WagSelection();
+
         }
 
         private static void IteratorDemo()
@@ -82,7 +94,7 @@ namespace WAGFactory
             IWag widget = wagDirector.Build(wagBuilder);
             Console.WriteLine(widget);
 
-            AbstractGadget abstractGadget = new SmallGadget(FinishColor.PlainBlack);
+            AbstractGadget abstractGadget = new SmallGadget(FinishColor.PlainBlack, new SmallSize(4, true));
             WagBuilder builder = new GadgetBuilder(abstractGadget);
             WagDirector director = new GadgetDirector();
             IWag gadget = director.Build(builder);
@@ -102,6 +114,7 @@ namespace WAGFactory
             Console.WriteLine(gadgetComponents.Buttons);
             Console.WriteLine(gadgetComponents.Lights);
             Console.WriteLine(gadgetComponents.Switch);
+            Console.WriteLine(gadgetComponents.Widgets);
         }
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WAGFactory
 {
-    public interface IWag : ISize
+    public interface IWag
     {
-        ISize GetWagSize { get; }
+        ISelectSize GetWagSize { get; }
 
         FinishColor ColorType { get; }
 
