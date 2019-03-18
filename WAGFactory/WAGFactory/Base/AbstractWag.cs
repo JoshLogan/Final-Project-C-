@@ -8,78 +8,48 @@ namespace WAGFactory
 {
     public abstract class AbstractWag : IWag
     {
+        private FinishColor _finishColor;
         private ISize _size;
 
-        private FinishColor _typeColor;
-
-        public FinishColor TypeColor
+        public FinishColor ColorType
         {
-            get
-            {
-                return _typeColor;
-            }
+            get { return _finishColor; }
         }
 
-        public ISize GetSize
+        public ISize GetWagSize
         {
-            get
-            {
-                return _size;
-            }
+            get { return _size; }
         }
 
         public abstract decimal Price { get; }
 
+        public int NumberOf { get; }
 
-        public AbstractWag(ISize size)
-        {
-            _size = size;
-        }
+        public bool IsSmall { get; }
 
-        public AbstractWag(FinishColor typeColor)
-        {
-            _typeColor = typeColor;
-        }
+        public AbstractWag() { }
 
-        public AbstractWag(ISize size, FinishColor typeColor)
-        {
-            _size = size;
-            _typeColor = typeColor;
-        }
+        public AbstractWag(FinishColor color)
+        { this._finishColor = color; }
 
-        public virtual void CleanWidget()
+        public AbstractWag(FinishColor color, ISize size)
         {
-            Console.WriteLine("Cleaning widget . . . ");
-        }
-
-        public virtual void InstallWidget()
-        {
-            Console.WriteLine("Installing widget . . .");
+            this._finishColor = color;
+            this._size = size;
         }
 
         public virtual void Paint(FinishColor color)
         {
-            _typeColor = color;
+            this._finishColor = color;
         }
 
         public override string ToString()
         {
-            return this.GetType().Name + "Widget Finish and color is " + _typeColor + " and the Price is $" + Price;
+            return this.GetType().Name + ": With a Finish that is " + _finishColor + " and the Price is $" + Price;
         }
 
-        public virtual void PrepWidget()
-        {
-            Console.WriteLine("Preping widget . . . ");
-        }
 
-        public virtual void TestWidget()
-        {
-            Console.WriteLine("Testing widget . . . ");
-        }
 
-        public AbstractWag()
-        {
 
-        }
     }
 }

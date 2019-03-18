@@ -21,34 +21,30 @@ namespace WAGFactory
             }
         }
 
+
+        public override decimal Price { get; } = 12500.00m;
+
+        public SmallWidget(SmallSize size) : this(FinishColor.PlainWhite, size)
+        {
+
+        }
+
+        public SmallWidget(FinishColor color, ISize size) : base(color, size)
+        {
+
+        }
+
+        public SmallWidget(FinishColor color) : base(color)
+        {
+        }
+
         public SmallWidget()
         {
         }
 
-        public SmallWidget(ISize size) : base(size)
-        {
-        }
-
-        public SmallWidget(ISize size, FinishColor color) : base(size, color)
-        {
-
-        }
-
-        public SmallWidget(FinishColor color)
-        {
-            _color = color;
-        }
-
-        public new decimal Price = 3500.00m;
-
-        public override void Paint(FinishColor color)
-        {
-            base.Paint(color);
-        }
-
         public override string ToString()
         {
-            return this.GetType().Name + ": Widget with " + _gearParts + _leverParts + _springParts + " With a finish that is " + _color + " and priced at $" + Price;
+            return this.GetType().Name + ": Widget has " + _gearParts + _leverParts + _springParts + " with a finish that is " + _color + " and priced at $" + Price;
         }
 
     }

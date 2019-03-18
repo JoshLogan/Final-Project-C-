@@ -62,6 +62,7 @@
     <Compile Include="Base\MediumGadget.cs" />
     <Compile Include="Base\MediumWidget.cs" />
     <Compile Include="Base\SmallGadget.cs" />
+    <Compile Include="Base\SmallSize.cs" />
     <Compile Include="Base\SmallWidget.cs" />
     <Compile Include="Builder\GadgetBuilder.cs" />
     <Compile Include="Builder\GadgetDirector.cs" />

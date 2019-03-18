@@ -6,22 +6,17 @@ using System.Threading.Tasks;
 
 namespace WAGFactory
 {
-    public interface IWag
+    public interface IWag : ISize
     {
+        ISize GetWagSize { get; }
 
-        FinishColor TypeColor { get; }
+        FinishColor ColorType { get; }
 
         decimal Price { get; }
 
         void Paint(FinishColor color);
 
-        void CleanWidget();
 
-        void PrepWidget();
-
-        void InstallWidget();
-
-        void TestWidget();
 
     }
 }

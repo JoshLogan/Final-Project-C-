@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace WAGFactory
 {
-    public interface ISize
+    public class SmallSize : AbstractSize
     {
-        int NumberOf { get; }
-        bool IsSmall { get; }
+        public SmallSize(int numberOf, bool isSmall) : base(numberOf, true)
+        {
+
+        }
     }
 }

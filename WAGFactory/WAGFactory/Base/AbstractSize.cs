@@ -6,26 +6,35 @@ using System.Threading.Tasks;
 
 namespace WAGFactory
 {
-    class AbstractSize : ISize
+    public class AbstractSize : ISize
     {
-        private int _size;
+        private int _numberOf;
+        private bool _isSmall;
 
-        public int Size
+        public int NumberOf
         {
             get
             {
-                return _size;
+                return _numberOf;
+            }
+        }
+        public bool IsSmall
+        {
+            get
+            {
+                return _isSmall;
             }
         }
 
-        public AbstractSize(int size)
+        public AbstractSize(int numberOf, bool isSmall)
         {
-            _size = size;
+            this._numberOf = numberOf;
+            this._isSmall = isSmall;
         }
 
         public override string ToString()
         {
-            return this.GetType().Name + " is " + _size;
+            return this.GetType().Name + ". The size is " + _isSmall + " and there are " + _numberOf + " of them.";
         }
     }
 }

@@ -8,21 +8,18 @@ namespace WAGFactory
 {
     public abstract class AbstractGadget : AbstractWag
     {
+        public override decimal Price { get; } = 6000.00m;
 
-        public AbstractGadget(ISize size) : this(size, FinishColor.PlainBlack)
-        {
-
-        }
-
-        public AbstractGadget(ISize size, FinishColor color) : base(size, color)
-        {
-
-        }
-
-        protected AbstractGadget()
+        public AbstractGadget(FinishColor color) : base(color)
         {
         }
 
-        public override decimal Price { get; } = 1900.00m;
+        public AbstractGadget(FinishColor color, ISize size) : base(color, size)
+        {
+        }
+
+        public AbstractGadget()
+        {
+        }
     }
 }

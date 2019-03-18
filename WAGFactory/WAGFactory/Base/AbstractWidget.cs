@@ -8,50 +8,37 @@ namespace WAGFactory
 {
     public abstract class AbstractWidget : AbstractWag
     {
+        private FinishColor _typeColor;
+        private ISize _size;
 
-        public override decimal Price { get; } = 500.00m;
 
-        public AbstractWidget(ISize size) : this(size, FinishColor.PlainWhite)
+        public FinishColor ColorType
         {
-
+            get
+            {
+                return _typeColor;
+            }
         }
-
-        public AbstractWidget(ISize size, FinishColor color) : base(size, color)
+        public ISize GetWagSize
         {
+            get
+            {
 
+                return _size;
+            }
         }
         public AbstractWidget(FinishColor color) : base(color)
         {
 
         }
-        protected AbstractWidget()
+
+        public AbstractWidget(FinishColor color, ISize size) : base(color, size)
         {
+
         }
 
-        public override void CleanWidget()
+        public AbstractWidget()
         {
-            base.CleanWidget();
         }
-
-        public override void InstallWidget()
-        {
-            base.InstallWidget();
-        }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
-
-        public override void PrepWidget()
-        {
-            base.PrepWidget();
-        }
-
-        public override void TestWidget()
-        {
-            base.TestWidget();
-        }
-
     }
 }

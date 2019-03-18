@@ -16,10 +16,7 @@ namespace Facade
 
             WagDocumentation.PrintSpecSheet(wag);
 
-            wag.CleanWidget();
-            wag.PrepWidget();
-            wag.TestWidget();
-            wag.InstallWidget();
+
         }
     }
 }

@@ -7,6 +7,7 @@ using WAGFactory;
 using AbstractWagFactory;
 using Builder;
 using Decorator;
+using Iterator;
 
 namespace WAGFactory
 {
@@ -14,16 +15,37 @@ namespace WAGFactory
     {
         static void Main(string[] args)
         {
-            //AbstractWagDemo();
-            //BuilderPatternDemo();
-            //SmallWidget();
-            //MediumWidget();
+            AbstractWagDemo();
+            BuilderPatternDemo();
+            SmallWidget();
+            MediumWidget();
             DecoratorPatternDemo();
+            IteratorDemo();
+        }
+
+        private static void IteratorDemo()
+        {
+            Console.WriteLine("=== Widgets ===");
+            WidgetRange widgetRange = new WidgetRange();
+            PrintIterator(widgetRange.GetEnumerator());
+            Console.WriteLine("===============================================================");
+            Console.WriteLine("=== Gadgets ===");
+            GadgetRange gadgetRange = new GadgetRange();
+            PrintIterator(gadgetRange.GetEnumerator());
+
+        }
+
+        public static void PrintIterator(IEnumerator<IWag> iter)
+        {
+            while (iter.MoveNext())
+            {
+                Console.WriteLine(iter.Current);
+            }
         }
 
         private static void DecoratorPatternDemo()
         {
-            IWag mySmallWidget = new SmallWidget(FinishColor.PlatinumPlated);
+            IWag mySmallWidget = new SmallWidget(FinishColor.PlainBlack);
             Console.WriteLine(mySmallWidget);
 
             mySmallWidget = new CustomComponentsOption(mySmallWidget);
@@ -36,7 +58,7 @@ namespace WAGFactory
 
         private static void MediumWidget()
         {
-            AbstractWidget widget = new MediumWidget(FinishColor.PaintedBlue);
+            AbstractWidget widget = new MediumWidget(FinishColor.PaintedGreen);
             WagBuilder builder = new WidgetBuilder(widget);
             WagDirector director = new WidgetDirector();
             IWag mediumWidget = director.Build(builder);
@@ -54,13 +76,13 @@ namespace WAGFactory
 
         private static void BuilderPatternDemo()
         {
-            AbstractWidget abstractWidget = new SmallWidget();
+            AbstractWidget abstractWidget = new SmallWidget(FinishColor.PlatinumPlated);
             WagBuilder wagBuilder = new WidgetBuilder(abstractWidget);
             WagDirector wagDirector = new WidgetDirector();
             IWag widget = wagDirector.Build(wagBuilder);
             Console.WriteLine(widget);
 
-            AbstractGadget abstractGadget = new SmallGadget();
+            AbstractGadget abstractGadget = new SmallGadget(FinishColor.PlainBlack);
             WagBuilder builder = new GadgetBuilder(abstractGadget);
             WagDirector director = new GadgetDirector();
             IWag gadget = director.Build(builder);

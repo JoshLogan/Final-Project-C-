@@ -6,29 +6,42 @@ using System.Threading.Tasks;
 
 namespace WAGFactory
 {
-    class SmallGadget : AbstractGadget
+    public class SmallGadget : AbstractGadget
     {
+        private string _gadgetMadeOf = " 1 Small Widget, 1 Medium Widget, and 0 Large Widgets ";
+        private string _gadgetParts = " a Switch and a couple Buttons. ";
+        private string _powerSource = " powered by a Battery. ";
+        private FinishColor _color = FinishColor.PlainWhite;
+
+        public FinishColor Color
+        {
+            get { return _color; }
+        }
+
+        public override decimal Price { get; } = 27050.00m;
+
+
+        public SmallGadget(ISize size) : this(FinishColor.PlainBlack, size)
+        {
+
+        }
+
+        public SmallGadget(FinishColor color, ISize size) : base(color, size)
+        {
+
+        }
+
+        public SmallGadget(FinishColor color) : base(color)
+        {
+        }
 
         public SmallGadget()
         {
-
         }
 
-        public SmallGadget(ISize size) : base(size)
+        public override string ToString()
         {
-        }
-
-        public SmallGadget(ISize size, FinishColor color) : base(size, color)
-        {
-        }
-
-
-
-        public override decimal Price => base.Price;
-
-        public override void Paint(FinishColor color)
-        {
-            base.Paint(color);
+            return this.GetType().Name + ": Has " + _gadgetMadeOf + "with" + _gadgetParts + " It is " + _powerSource + " with a finish that is " + _color + " and priced at $" + Price;
         }
     }
 }

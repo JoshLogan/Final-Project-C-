@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WAGFactory
 {
-    class LargeWidget : AbstractWidget
+    public class LargeWidget : AbstractWidget
     {
         private string _gearParts = " 9 Gears,";
         private string _springParts = " 4 Springs.";
@@ -22,48 +22,20 @@ namespace WAGFactory
             }
         }
 
+        public override decimal Price { get; } = 20000.00m;
+
+        public LargeWidget(FinishColor color) : base(color)
+        {
+
+        }
+
+        public LargeWidget(FinishColor color, ISize size) : base(color, size)
+        {
+
+        }
 
         public LargeWidget()
         {
-        }
-
-        public LargeWidget(FinishColor color)
-        {
-            _color = color;
-        }
-
-        public LargeWidget(ISize size) : base(size)
-        {
-        }
-
-        public LargeWidget(ISize size, FinishColor color) : base(size, color)
-        {
-        }
-
-
-
-        public new decimal Price = 8600.00m;
-
-        public override void CleanWidget()
-        {
-            Console.WriteLine("Cleaning Large Widget . . . ");
-        }
-
-        public override void InstallWidget()
-        {
-            Console.WriteLine("Installing Large Widget . . .");
-        }
-
-
-
-        public override void PrepWidget()
-        {
-            base.PrepWidget();
-        }
-
-        public override void TestWidget()
-        {
-            base.TestWidget();
         }
 
         public override string ToString()
