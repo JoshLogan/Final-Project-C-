@@ -23,9 +23,9 @@ namespace Iterator
         {
             _wags = new List<IWag>();
 
-            _wags.Add(new SmallWidget());
-            _wags.Add(new MediumWidget());
-            _wags.Add(new LargeWidget());
+            _wags.Add(new SmallWidget(FinishColor.PlainWhite));
+            _wags.Add(new MediumWidget(FinishColor.PlainBlack));
+            _wags.Add(new LargeWidget(FinishColor.PlatedPlatinum));
 
 
         }

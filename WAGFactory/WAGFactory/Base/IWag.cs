@@ -10,7 +10,7 @@ namespace WAGFactory
     {
         ISelectSize GetWagSize { get; }
 
-        FinishColor ColorType { get; }
+        FinishColor TypeColor { get; }
 
         decimal Price { get; }
 

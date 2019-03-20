@@ -18,5 +18,10 @@ namespace AbstractWagFactory
             throw new NotImplementedException();
             //Gadget factory requesting widget factory.
         }
+
+        public override ICreateSize CreatSize()
+        {
+            return new CreateSize();
+        }
     }
 }

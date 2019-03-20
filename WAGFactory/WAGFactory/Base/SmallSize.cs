@@ -10,7 +10,7 @@ namespace WAGFactory
     {
         public SmallSize(int numberOf, bool isSmall) : base(numberOf, false)
         {
-
+            Console.WriteLine("");
         }
     }
 }

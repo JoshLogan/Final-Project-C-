@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractWagFactory\AbstractWAGFactory.cs" />
+    <Compile Include="AbstractWagFactory\CreateSize.cs" />
     <Compile Include="AbstractWagFactory\GadgetComponents.cs" />
     <Compile Include="AbstractWagFactory\GadgetFactory.cs" />
+    <Compile Include="AbstractWagFactory\ICreateSize.cs" />
     <Compile Include="AbstractWagFactory\IGadgetComponents.cs" />
     <Compile Include="AbstractWagFactory\IWidgetComponents.cs" />
     <Compile Include="AbstractWagFactory\WidgetComponents.cs" />

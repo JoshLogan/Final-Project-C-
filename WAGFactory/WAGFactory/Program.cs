@@ -18,21 +18,25 @@ namespace WAGFactory
         {
             //AbstractWagDemo();
             //BuilderPatternDemo();
-            // SmallWidget();
-            // MediumWidget();
-            // DecoratorPatternDemo();
-            //  IteratorDemo();
+            //SmallWidget();
+            //MediumWidget();
+            //DecoratorPatternDemo();
+            //IteratorDemo();
             SizeSelectDemo();
         }
 
         private static void SizeSelectDemo()
         {
+            AbstractWagDemo();
+            Console.WriteLine("Welcome to The Ultimate Widgets & Gadgets Factory. Where the best Widgets and Gadgets of all the World are created by hand!");
+            Console.WriteLine("We offer three sizes of each: Small, Medium, or Large");
+            Console.WriteLine("They are Listed below: ");
             IteratorDemo();
-
 
             SelectWagSize sws = new SelectWagSize();
             sws.WagSelection();
 
+            Console.ReadLine();
         }
 
         private static void IteratorDemo()
@@ -88,7 +92,7 @@ namespace WAGFactory
 
         private static void BuilderPatternDemo()
         {
-            AbstractWidget abstractWidget = new SmallWidget(FinishColor.PlatinumPlated);
+            AbstractWidget abstractWidget = new SmallWidget(FinishColor.PlatedPlatinum);
             WagBuilder wagBuilder = new WidgetBuilder(abstractWidget);
             WagDirector wagDirector = new WidgetDirector();
             IWag widget = wagDirector.Build(wagBuilder);
@@ -105,16 +109,27 @@ namespace WAGFactory
         {
             AbstractWAGFactory factory = new WidgetFactory();
             IWidgetComponents widgetComponents = factory.CreateWidgetComponents();
+            ICreateSize create = factory.CreatSize();
             Console.WriteLine(widgetComponents.GearParts);
             Console.WriteLine(widgetComponents.SpringParts);
             Console.WriteLine(widgetComponents.LeverParts);
+            Console.WriteLine(create.SmallWidget);
+            Console.WriteLine(create.MediumWidget);
+            Console.WriteLine(create.LargeWidget);
+
+
 
             AbstractWAGFactory gFactory = new GadgetFactory();
             IGadgetComponents gadgetComponents = gFactory.CreateGadgetComponents();
+            ICreateSize createSize = gFactory.CreatSize();
             Console.WriteLine(gadgetComponents.Buttons);
             Console.WriteLine(gadgetComponents.Lights);
             Console.WriteLine(gadgetComponents.Switch);
             Console.WriteLine(gadgetComponents.Widgets);
+            Console.WriteLine(createSize.SmallGadget);
+            Console.WriteLine(createSize.MediumGadget);
+            Console.WriteLine(createSize.LargeGadget);
+
         }
     }
 }

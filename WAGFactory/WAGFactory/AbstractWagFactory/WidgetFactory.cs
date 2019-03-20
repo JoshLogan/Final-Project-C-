@@ -17,5 +17,10 @@ namespace AbstractWagFactory
         {
             return new WidgetComponents();
         }
+
+        public override ICreateSize CreatSize()
+        {
+            return new CreateSize();
+        }
     }
 }

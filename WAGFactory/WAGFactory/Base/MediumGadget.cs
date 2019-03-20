@@ -11,7 +11,7 @@ namespace WAGFactory
         private string _gadgetMadeOf = " 2 Small Widget, 2 Medium Widget, and 1 Large Widgets ";
         private string _gadgetParts = " 1 Switch, 2 Buttons, and 3 Lights. ";
         private string _powerSource = " solar powered. ";
-        private FinishColor _color;
+        private FinishColor _color = FinishColor.PaintedGreen;
 
         public FinishColor Color
         {

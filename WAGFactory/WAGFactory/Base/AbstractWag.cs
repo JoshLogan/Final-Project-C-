@@ -11,7 +11,7 @@ namespace WAGFactory
         private FinishColor _finishColor;
         private ISelectSize _size;
 
-        public FinishColor ColorType
+        public FinishColor TypeColor
         {
             get { return _finishColor; }
         }

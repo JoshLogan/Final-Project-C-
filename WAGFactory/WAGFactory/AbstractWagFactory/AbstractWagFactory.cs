@@ -10,5 +10,6 @@ namespace AbstractWagFactory
     {
         public abstract IWidgetComponents CreateWidgetComponents();
         public abstract IGadgetComponents CreateGadgetComponents();
+        public abstract ICreateSize CreatSize();
     }
 }
