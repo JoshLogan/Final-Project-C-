@@ -48,6 +48,24 @@ namespace WAGFactory
             return this.GetType().Name + ": With a Finish that is " + _finishColor + " and the Price is $" + Price;
         }
 
+        public void CleanWidget()
+        {
+            throw new NotImplementedException();
+        }
 
+        public void CleanGadget()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GatherOrder()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PlaceOrder()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

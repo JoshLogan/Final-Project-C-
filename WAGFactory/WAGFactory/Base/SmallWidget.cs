@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Singleton;
 
 namespace WAGFactory
 {
@@ -12,6 +13,7 @@ namespace WAGFactory
         private string _springParts = " 3 Springs.";
         private string _leverParts = " 1 Lever,";
         private FinishColor _color = FinishColor.PlainWhite;
+        private string _serialNum;
 
         public FinishColor Color
         {
@@ -42,9 +44,11 @@ namespace WAGFactory
         {
         }
 
+
+
         public override string ToString()
         {
-            return this.GetType().Name + ": Has " + _gearParts + _leverParts + _springParts + " with a finish that is " + _color + " and priced at $" + Price;
+            return "The Small Widget contains " + _gearParts + _leverParts + _springParts + " with a finish that is " + _color + " and priced at $" + Price;
         }
 
     }

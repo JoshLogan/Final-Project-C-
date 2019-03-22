@@ -16,6 +16,10 @@ namespace WAGFactory
 
         void Paint(FinishColor color);
 
+        void CleanWidget();
+        void CleanGadget();
+        void GatherOrder();
+        void PlaceOrder();
 
 
     }
