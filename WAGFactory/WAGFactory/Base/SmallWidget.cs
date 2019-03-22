@@ -13,7 +13,7 @@ namespace WAGFactory
         private string _springParts = " 3 Springs.";
         private string _leverParts = " 1 Lever,";
         private FinishColor _color = FinishColor.PlainWhite;
-        private string _serialNum;
+
 
         public FinishColor Color
         {

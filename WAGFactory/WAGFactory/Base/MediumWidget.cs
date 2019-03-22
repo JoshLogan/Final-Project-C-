@@ -10,7 +10,7 @@ namespace WAGFactory
     {
         private string _gearParts = " 4 Gears,";
         private string _springParts = " 5 Springs.";
-        private string _leverParts = " 3 Lever,";
+        private string _leverParts = " 3 Levers,";
 
         private FinishColor _color = FinishColor.PlainBlack;
 

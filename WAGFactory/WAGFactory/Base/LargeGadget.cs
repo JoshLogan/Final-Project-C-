@@ -8,7 +8,7 @@ namespace WAGFactory
 {
     public class LargeGadget : AbstractGadget
     {
-        private string _gadgetMadeOf = " 3 Small Widget, 6 Medium Widget, and 3 Large Widgets ";
+        private string _gadgetMadeOf = " 3 Small Widgets, 6 Medium Widgets, and 3 Large Widgets ";
         private string _gadgetParts = " 2 Switchs, 4 Buttons, and 5 Lights. ";
         private string _powerSource = " Generator powered. ";
         private FinishColor _color = FinishColor.PlatedPlatinum;
