@@ -40,7 +40,7 @@ namespace WAGFactory
 
         public override string ToString()
         {
-            return this.GetType().Name + ": Widget with " + _gearParts + _leverParts + _springParts + " With a finish that is " + _color + " and priced at $" + Price;
+            return "The Large Widget has " + _gearParts + _leverParts + _springParts + " With a finish that is " + _color + " and priced at $" + Price;
         }
     }
 }

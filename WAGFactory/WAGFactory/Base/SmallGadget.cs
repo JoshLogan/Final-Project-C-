@@ -41,7 +41,7 @@ namespace WAGFactory
 
         public override string ToString()
         {
-            return this.GetType().Name + ": Has " + _gadgetMadeOf + "with" + _gadgetParts + " It is " + _powerSource + " with a finish that is " + _color + " and priced at $" + Price;
+            return "The Small Gadget has " + _gadgetMadeOf + "with" + _gadgetParts + " It is " + _powerSource + " with a finish that is " + _color + " and priced at $" + Price;
         }
     }
 }

@@ -27,28 +27,50 @@ namespace WAGFactory
 
         private static void SizeSelectDemo()
         {
-            AbstractWagDemo();
-            Console.WriteLine("Welcome to The Ultimate Widgets & Gadgets Factory. Where the best Widgets and Gadgets of all the World are created by hand!");
-            Console.WriteLine("We offer three sizes of each: Small, Medium, or Large");
-            Console.WriteLine("They are Listed below: ");
-            IteratorDemo();
+            AbstractWAGFactory factory = new WidgetFactory();
+            IWidgetComponents widgetComponents = factory.CreateWidgetComponents();
+            ICreateSize create = factory.CreatSize();
+            AbstractWAGFactory gFactory = new GadgetFactory();
+            IGadgetComponents gadgetComponents = gFactory.CreateGadgetComponents();
+            ICreateSize createSize = gFactory.CreatSize();
 
+
+
+            Console.WriteLine("Welcome to our Factory. We are in the business of : ");
+            Console.WriteLine(" ");
+            Console.WriteLine(create.SmallWidget);
+            Console.WriteLine(create.MediumWidget);
+            Console.WriteLine(create.LargeWidget);
+            Console.WriteLine(create.SmallGadget);
+            Console.WriteLine(create.MediumGadget);
+            Console.WriteLine(create.LargeGadget);
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+            Console.WriteLine("Below is a list of our Products: ");
+            Console.WriteLine(" ");
+            IteratorDemo();
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
             SelectWagSize sws = new SelectWagSize();
             sws.WagSelection();
-
+            Console.WriteLine(" ");
             Console.ReadLine();
         }
 
         private static void IteratorDemo()
         {
             Console.WriteLine("=== Widgets ===");
+            Console.WriteLine(" ");
             WidgetRange widgetRange = new WidgetRange();
             PrintIterator(widgetRange.GetEnumerator());
+            Console.WriteLine(" ");
             Console.WriteLine("===============================================================");
+            Console.WriteLine(" ");
             Console.WriteLine("=== Gadgets ===");
+            Console.WriteLine(" ");
             GadgetRange gadgetRange = new GadgetRange();
             PrintIterator(gadgetRange.GetEnumerator());
-
+            Console.WriteLine(" ");
         }
 
         public static void PrintIterator(IEnumerator<IWag> iter)
@@ -98,7 +120,7 @@ namespace WAGFactory
             IWag widget = wagDirector.Build(wagBuilder);
             Console.WriteLine(widget);
 
-            AbstractGadget abstractGadget = new SmallGadget(FinishColor.PlainBlack, new SmallSize(4, true));
+            AbstractGadget abstractGadget = new SmallGadget(FinishColor.PlainBlack);
             WagBuilder builder = new GadgetBuilder(abstractGadget);
             WagDirector director = new GadgetDirector();
             IWag gadget = director.Build(builder);

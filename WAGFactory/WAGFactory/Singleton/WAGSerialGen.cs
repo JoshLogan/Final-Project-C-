@@ -36,7 +36,7 @@ namespace Singleton
                 return instance;
             }
         }
-        private WAGSerialGen() { }
+        public WAGSerialGen() { }
         public string NextSerial(WaGs waGs)
         {
             int value;

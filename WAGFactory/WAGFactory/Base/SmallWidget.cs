@@ -12,6 +12,7 @@ namespace WAGFactory
         private string _gearParts = " 2 Gears,";
         private string _springParts = " 3 Springs.";
         private string _leverParts = " 1 Lever,";
+        private string _serial;
         private FinishColor _color = FinishColor.PlainWhite;
 
 
@@ -26,7 +27,7 @@ namespace WAGFactory
 
         public override decimal Price { get; } = 12500.00m;
 
-        public SmallWidget(SmallSize size) : this(FinishColor.PlainWhite, size)
+        public SmallWidget(ISelectSize size) : this(FinishColor.PlainWhite, size)
         {
 
         }
@@ -38,6 +39,7 @@ namespace WAGFactory
 
         public SmallWidget(FinishColor color) : base(color)
         {
+
         }
 
         public SmallWidget()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Singleton;
 
 namespace WAGFactory
 {
@@ -10,6 +11,8 @@ namespace WAGFactory
     {
         private FinishColor _finishColor;
         private ISelectSize _size;
+
+
 
         public FinishColor TypeColor
         {
@@ -30,13 +33,16 @@ namespace WAGFactory
         public AbstractWag() { }
 
         public AbstractWag(FinishColor color)
-        { this._finishColor = color; }
+        {
+            this._finishColor = color;
+        }
 
         public AbstractWag(FinishColor color, ISelectSize size)
         {
             this._finishColor = color;
             this._size = size;
         }
+
 
         public virtual void Paint(FinishColor color)
         {
@@ -45,7 +51,7 @@ namespace WAGFactory
 
         public override string ToString()
         {
-            return this.GetType().Name + ": With a Finish that is " + _finishColor + " and the Price is $" + Price;
+            return "Abstract Wag with a Finish that is " + _finishColor + " and the Price is $" + Price;
         }
 
         public void CleanWidget()
