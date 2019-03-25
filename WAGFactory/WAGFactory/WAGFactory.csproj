@@ -35,6 +35,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,11 +57,9 @@
     <Compile Include="AbstractWagFactory\WidgetComponents.cs" />
     <Compile Include="AbstractWagFactory\WidgetFactory.cs" />
     <Compile Include="Base\AbstractGadget.cs" />
-    <Compile Include="Base\AbstractSize.cs" />
     <Compile Include="Base\AbstractWag.cs" />
     <Compile Include="Base\AbstractWidget.cs" />
     <Compile Include="Base\FinishColor.cs" />
-    <Compile Include="Base\ISelectSize.cs" />
     <Compile Include="Base\IWag.cs" />
     <Compile Include="Base\LargeGadget.cs" />
     <Compile Include="Base\LargeWidget.cs" />
@@ -80,13 +82,37 @@
     <Compile Include="Facade\WagRegistration.cs" />
     <Compile Include="Iterator\GadgetRange.cs" />
     <Compile Include="Iterator\WidgetRange.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Program.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Singleton\WAGSerialGen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Program.resx">
+      <DependentUpon>Program.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wag2-sv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled drawing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kermit3.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

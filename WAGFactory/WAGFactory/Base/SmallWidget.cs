@@ -10,9 +10,11 @@ namespace WAGFactory
     public class SmallWidget : AbstractWidget
     {
         private string _gearParts = " 2 Gears,";
-        private string _springParts = " 3 Springs.";
+        private string _springParts = " 3 Springs";
         private string _leverParts = " 1 Lever,";
-        private string _serial;
+        public string serial { get; private set; }
+
+
         private FinishColor _color = FinishColor.PlainWhite;
 
 
@@ -25,32 +27,29 @@ namespace WAGFactory
         }
 
 
-        public override decimal Price { get; } = 12500.00m;
+        public override decimal Price { get; } = 250.00m;
 
-        public SmallWidget(ISelectSize size) : this(FinishColor.PlainWhite, size)
-        {
 
-        }
-
-        public SmallWidget(FinishColor color, ISelectSize size) : base(color, size)
-        {
-
-        }
 
         public SmallWidget(FinishColor color) : base(color)
         {
-
+            this._color = color;
+            serial = WAGSerialGen.Instance.NextSerial(WaGs.smallwidget);
         }
 
         public SmallWidget()
         {
+            serial = WAGSerialGen.Instance.NextSerial(WaGs.smallwidget);
         }
 
 
 
         public override string ToString()
         {
-            return "The Small Widget contains " + _gearParts + _leverParts + _springParts + " with a finish that is " + _color + " and priced at $" + Price;
+            Console.WriteLine("The Small Widget contains " + _gearParts + _leverParts + _springParts + ".");
+            Console.WriteLine("With a finish that is " + _color + ".");
+            Console.WriteLine("Priced at $" + Price + ".");
+            return " Serial Number:  " + serial;
         }
 
     }

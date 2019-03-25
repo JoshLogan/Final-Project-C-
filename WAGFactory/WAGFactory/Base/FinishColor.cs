@@ -8,6 +8,7 @@ namespace WAGFactory
 {
     public enum FinishColor
     {
-        PlatedGold, PlatedPlatinum, PaintedBlue, PaintedGreen, PlainWhite, PlainBlack
+        PlatedGold, PlatedPlatinum, PlatedRoseGold, PlatedSilver, PlatedRhodium, PlatedCamouflage, PaintedRoyalBlue, PaintedGreen,
+        PaintedChiefsRed, PaintedYellow, PaintedPink, PlainWhite, PlainBlack, PlainGray
     }
 }

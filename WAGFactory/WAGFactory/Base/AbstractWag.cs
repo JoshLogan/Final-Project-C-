@@ -10,7 +10,7 @@ namespace WAGFactory
     public abstract class AbstractWag : IWag
     {
         private FinishColor _finishColor;
-        private ISelectSize _size;
+
 
 
 
@@ -19,16 +19,11 @@ namespace WAGFactory
             get { return _finishColor; }
         }
 
-        public ISelectSize GetWagSize
-        {
-            get { return _size; }
-        }
+
 
         public abstract decimal Price { get; }
 
-        public int NumberOf { get; }
 
-        public bool IsSmall { get; }
 
         public AbstractWag() { }
 
@@ -36,13 +31,6 @@ namespace WAGFactory
         {
             this._finishColor = color;
         }
-
-        public AbstractWag(FinishColor color, ISelectSize size)
-        {
-            this._finishColor = color;
-            this._size = size;
-        }
-
 
         public virtual void Paint(FinishColor color)
         {

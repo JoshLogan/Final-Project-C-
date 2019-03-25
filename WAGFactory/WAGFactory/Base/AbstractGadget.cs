@@ -14,9 +14,7 @@ namespace WAGFactory
         {
         }
 
-        public AbstractGadget(FinishColor color, ISelectSize size) : base(color, size)
-        {
-        }
+
 
         public AbstractGadget()
         {
