@@ -11,19 +11,12 @@ namespace WAGFactory
     {
         private FinishColor _finishColor;
 
-
-
-
         public FinishColor TypeColor
         {
             get { return _finishColor; }
         }
 
-
-
         public abstract decimal Price { get; }
-
-
 
         public AbstractWag() { }
 

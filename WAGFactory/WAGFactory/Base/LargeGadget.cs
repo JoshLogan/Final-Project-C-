@@ -38,7 +38,7 @@ namespace WAGFactory
 
         public override string ToString()
         {
-            Console.WriteLine("The Medium Gadget contains " + _gadgetMadeOf + ".");
+            Console.WriteLine("The Large Gadget contains " + _gadgetMadeOf + ".");
             Console.WriteLine("This Gadget comes with " + _gadgetParts);
             Console.WriteLine("Power Soruce: " + _powerSource);
             Console.WriteLine("With a finish that is " + _color + ".");

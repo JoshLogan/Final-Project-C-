@@ -27,22 +27,17 @@ namespace Base
             Console.WriteLine("   ");
             Console.WriteLine("Would you like to order a Widget or a Gadget?");
             answer = Convert.ToString(Console.ReadLine());
-            if (answer.ToLower() == "yes")
+            if (answer.ToLower() == "widget")
             {
                 Console.WriteLine(" ");
-                Console.WriteLine("We offer these six types: ");
+                Console.WriteLine("We offer these three types: ");
                 Console.WriteLine("Small Widget");
                 Console.WriteLine("Medium Widget");
                 Console.WriteLine("Large Widget");
-                Console.WriteLine("Small Gadget");
-                Console.WriteLine("Medium Gadget");
-                Console.WriteLine("Large Gadget");
                 Console.WriteLine(" ");
                 Console.WriteLine("What size and type would you like?");
                 sizeSelected = Convert.ToString(Console.ReadLine());
-
                 wagSelection = sizeSelected;
-
                 if (wagSelection.ToLower() == "small widget")
                 {
                     Console.WriteLine("Creating a Small Widget.");
@@ -58,7 +53,20 @@ namespace Base
                     Console.WriteLine("Creating a Large Widget.");
                     Console.WriteLine(lw.ToString());
                 }
-                else if (wagSelection.ToLower() == "small gadget")
+
+            }
+            else if (answer.ToLower() == "gadget")
+            {
+                Console.WriteLine(" ");
+                Console.WriteLine("We offer these three types: ");
+                Console.WriteLine("Small Gadget");
+                Console.WriteLine("Medium Gadget");
+                Console.WriteLine("Large Gadget");
+                Console.WriteLine(" ");
+                Console.WriteLine("What size and type would you like?");
+                sizeSelected = Convert.ToString(Console.ReadLine());
+                wagSelection = sizeSelected;
+                if (wagSelection.ToLower() == "small gadget")
                 {
                     Console.WriteLine("Creating a Small Gadget.");
                     Console.WriteLine(sg.ToString());
@@ -74,14 +82,19 @@ namespace Base
                     Console.WriteLine(lg.ToString());
                 }
             }
-            else if (answer.ToLower() == "no")
-            {
-                Console.WriteLine("Thanks for visiting our Widgets & Gadgets Factory. Please do come again!");
-            }
+
+
+
+
 
 
 
         }
 
+
+
+
     }
+
 }
+
