@@ -22,8 +22,10 @@ namespace WAGFactory
 
         public override decimal Price { get; } = 630.00m;
 
-
-
+        public override void Paint(FinishColor color)
+        {
+            this._color = Color;
+        }
 
         public SmallGadget(FinishColor color) : base(color)
         {

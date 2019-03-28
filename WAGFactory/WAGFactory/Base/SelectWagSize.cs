@@ -13,6 +13,7 @@ namespace Base
         string wagSelection;
         string sizeSelected;
         string answer;
+        string answer2;
 
 
         SmallWidget sw = new SmallWidget();
@@ -83,15 +84,32 @@ namespace Base
                 }
             }
 
-
-
-
-
-
-
+            Console.WriteLine(" Would you like to add more products to your Order today? Or Confirm Your Order? ");
+            answer2 = Convert.ToString(Console.ReadLine());
+            if (answer2.ToLower() == "add to order")
+            {
+                Console.WriteLine(" Redirecting you now...");
+                AddToOrder();
+            }
+            else if (answer2.ToLower() == "confirm order")
+            {
+                Console.WriteLine("Thank you for placing ");
+                Console.WriteLine("Redirecting to Order Summary..");
+                OSumm();
+            }
+           
+           
         }
-
-
+        public void AddToOrder()
+        {
+            SelectWagSize select = new SelectWagSize();
+            select.WagSelection();
+        }
+        public void OSumm()
+        {
+            Demo.OrderSummary order = new Demo.OrderSummary();
+            order.OrderConfirmation();
+        }
 
 
     }

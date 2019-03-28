@@ -12,7 +12,7 @@ namespace Facade
     {
         public static void PrintSpecSheet(IWag wag)
         {
-            Console.WriteLine("Printing Specifications SHeet . .  .");
+            Console.WriteLine("Printing Specifications SHeet . . .");
         }
     }
 }

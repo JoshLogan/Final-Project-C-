@@ -73,7 +73,7 @@
     <Compile Include="Decorator\AbstractWagOption.cs" />
     <Compile Include="Decorator\CustomComponentsOption.cs" />
     <Compile Include="Decorator\EverythingGoldOption.cs" />
-    <Compile Include="Demo\Customer1.cs" />
+    <Compile Include="Demo\OrderSummary.cs" />
     <Compile Include="Facade\WagDocumentation.cs" />
     <Compile Include="Facade\WagFacade.cs" />
     <Compile Include="Facade\WagRegistration.cs" />
