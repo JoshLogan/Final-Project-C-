@@ -107,11 +107,31 @@ namespace Base
         }
         public void OSumm()
         {
-            Demo.OrderSummary order = new Demo.OrderSummary();
-            order.OrderConfirmation();
+            OrderConfirmation();
         }
 
+        public void OrderConfirmation()
+        {
+            SmallGadget smallGadget = new SmallGadget();
+            LargeGadget largeGadget = new LargeGadget();
 
+
+            Console.WriteLine("++++++++++++++- -Order Summary- -+++++++++++++++++++++++");
+            Console.WriteLine("   ");
+            Console.WriteLine("++++++++++++++- **Review Order** -++++++++++++++++++++++");
+            Console.WriteLine("   ");
+            Console.WriteLine(" ************ Widget & Gadget Corporation ************ ");
+            Console.WriteLine(" *                                                   * ");
+            Console.WriteLine(" *                                                   * ");
+            Console.WriteLine(" *                                                   * ");
+            Console.WriteLine(smallGadget.ToString());
+            Console.WriteLine(largeGadget.ToString());
+            Console.WriteLine(" *                                                   * ");
+            Console.WriteLine(" ***************************************************** ");
+            Console.WriteLine(" Does this complete your Order?");
+
+
+        }
     }
 
 }

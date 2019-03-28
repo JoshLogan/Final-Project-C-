@@ -40,10 +40,14 @@ namespace WAGFactory
 
         public override string ToString()
         {
-            Console.WriteLine("The Small Gadget contains " + _gadgetMadeOf + ".");
-            Console.WriteLine("This Gadget comes with " + _gadgetParts);
-            Console.WriteLine("Power Soruce: " + _powerSource);
-            Console.WriteLine("With a finish that is " + _color + ".");
+            Console.WriteLine(" * The Small Gadget contains: * ");
+            Console.WriteLine(" * " +_gadgetMadeOf + ".      * ");
+            Console.WriteLine("This Gadget comes with: ");
+            Console.WriteLine(_gadgetParts + ".");
+            Console.WriteLine("Power Soruce: ");
+            Console.WriteLine(_powerSource + ".");
+            Console.WriteLine("With a finish that is: ");
+            Console.WriteLine(_color + ".");
             Console.WriteLine("Priced at $" + Price + ".");
             return "Serial Number: " + serial;
         }

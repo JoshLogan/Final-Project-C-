@@ -73,7 +73,6 @@
     <Compile Include="Decorator\AbstractWagOption.cs" />
     <Compile Include="Decorator\CustomComponentsOption.cs" />
     <Compile Include="Decorator\EverythingGoldOption.cs" />
-    <Compile Include="Demo\OrderSummary.cs" />
     <Compile Include="Facade\WagDocumentation.cs" />
     <Compile Include="Facade\WagFacade.cs" />
     <Compile Include="Facade\WagRegistration.cs" />
@@ -99,6 +98,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Demo\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
