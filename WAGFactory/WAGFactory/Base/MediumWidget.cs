@@ -9,7 +9,7 @@ namespace WAGFactory
 {
     public class MediumWidget : AbstractWidget
     {
-        private string _gearParts = " 4 Gears,";
+        private string _gearParts = "4 Gears,";
         private string _springParts = " 5 Springs.";
         private string _leverParts = " 3 Levers,";
         public string serial { get; private set; }
@@ -42,10 +42,13 @@ namespace WAGFactory
 
         public override string ToString()
         {
-            Console.WriteLine("The Medium Widget contains " + _gearParts + _leverParts + _springParts + ".");
-            Console.WriteLine("With a finish that is " + _color + ".");
-            Console.WriteLine("Priced at $" + Price + ".");
-            return " Serial Number:  " + serial;
+            Console.WriteLine("The Medium Widget contains: ");
+            Console.WriteLine("-----  " + _gearParts + _leverParts + _springParts);
+            Console.WriteLine("-----  With a finish that is: ");
+            Console.WriteLine("-----  " + _color + ".");
+            Console.WriteLine("-----  Starting Price: $" + Price + ".");
+
+            return "***** Serial Number:  " + serial + " *****";
         }
     }
 }

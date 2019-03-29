@@ -9,6 +9,7 @@ using Builder;
 using Decorator;
 using Iterator;
 using Base;
+using Facade;
 
 namespace WAGFactory
 {
@@ -24,6 +25,7 @@ namespace WAGFactory
             //MediumWidget();
             //DecoratorPatternDemo();
             //IteratorDemo();
+            //FacadePatDemo();
             SizeSelectDemo();
         }
 
@@ -38,26 +40,35 @@ namespace WAGFactory
 
 
 
-            Console.WriteLine("Welcome to our Factory. We are in the business of : ");
-            Console.WriteLine(" ");
+            Console.WriteLine(" Welcome to our WAG Corporation. We are in the business of: ");
+            Console.WriteLine("  ");
             Console.WriteLine(create.SmallWidget);
             Console.WriteLine(create.MediumWidget);
             Console.WriteLine(create.LargeWidget);
             Console.WriteLine(create.SmallGadget);
             Console.WriteLine(create.MediumGadget);
             Console.WriteLine(create.LargeGadget);
-            Console.WriteLine(" ");
-            Console.WriteLine(" ");
-            Console.WriteLine("Below is a list of our Products: ");
-            Console.WriteLine(" ");
+            Console.WriteLine("  ");
+            Console.WriteLine("  ");
+            Console.WriteLine(" Below is a list of our Products: ");
+            Console.WriteLine("  ");
             ProductList();
-            Console.WriteLine(" ");
-            Console.WriteLine(" ");
+            Console.WriteLine(" **The prices of these items are subject to change due to any custom or personal changes.");
+            Console.WriteLine(" **All sales are final. *30 day Warranty. No refunds. ");
             SelectWagSize sws = new SelectWagSize();
             sws.WagSelection();
             Console.WriteLine(" ");
+            Console.WriteLine("This concludes our Console Application of the WAG Corporation. I hope you enjoyed it!! Thank you for joining us today.");
             Console.ReadLine();
         }
+
+
+        private static void FacadePatDemo()
+        {
+            WagFacade facade = new WagFacade();
+            facade.PrepareForSale(new SmallGadget(FinishColor.PaintedChiefsRed));
+        }
+
 
         private static void ProductList()
         {

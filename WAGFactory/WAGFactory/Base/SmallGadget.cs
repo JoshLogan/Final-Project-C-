@@ -10,9 +10,9 @@ namespace WAGFactory
     public class SmallGadget : AbstractGadget
     {
         public string serial { get; private set; }
-        private string _gadgetMadeOf = " 1 Small Widget, 1 Medium Widget, and 0 Large Widgets ";
-        private string _gadgetParts = " a Switch and a couple Buttons. ";
-        private string _powerSource = " powered by a Battery. ";
+        private string _gadgetMadeOf = " 1 Small Widget, 1 Medium Widget";
+        private string _gadgetParts = " 1 Switch, 2 Buttons";
+        private string _powerSource = "Battery Powered";
         private FinishColor _color = FinishColor.PaintedRoyalBlue;
 
         public FinishColor Color
@@ -40,16 +40,16 @@ namespace WAGFactory
 
         public override string ToString()
         {
-            Console.WriteLine(" * The Small Gadget contains: * ");
-            Console.WriteLine(" * " +_gadgetMadeOf + ".      * ");
-            Console.WriteLine("This Gadget comes with: ");
-            Console.WriteLine(_gadgetParts + ".");
-            Console.WriteLine("Power Soruce: ");
-            Console.WriteLine(_powerSource + ".");
-            Console.WriteLine("With a finish that is: ");
-            Console.WriteLine(_color + ".");
-            Console.WriteLine("Priced at $" + Price + ".");
-            return "Serial Number: " + serial;
+            Console.WriteLine("The Small Gadget contains:");
+            Console.WriteLine("+++++ " + _gadgetMadeOf + ".");
+            Console.WriteLine("----- This Gadget comes with:   -----");
+            Console.WriteLine("+++++ "+_gadgetParts + ".");
+            Console.WriteLine("----- Power Soruce:         -----");
+            Console.WriteLine("+++++  " +_powerSource + ". ");
+            Console.WriteLine("----- With a finish that is:    -----");
+            Console.WriteLine("-----  " +_color + ".");
+            Console.WriteLine("----- Priced at $" + Price + ".");
+                       return "***** Serial Number: " + serial + " *****";
         }
     }
 }

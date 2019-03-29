@@ -46,14 +46,13 @@ namespace WAGFactory
 
         public override string ToString()
         {
-            Console.WriteLine("The Small Widget contains " + _gearParts + _leverParts + _springParts + ".");
-            Console.WriteLine(" ");
-            Console.WriteLine("With a finish that is " + _color + ".");
-            Console.WriteLine(" ");
-            Console.WriteLine("Priced at $" + Price + ".");
-            Console.WriteLine(" ");
-            return " Serial Number:  " + serial;
-        }
+            Console.WriteLine("The Small Widget contains: ");
+            Console.WriteLine("-----  " + _gearParts + _leverParts + _springParts + ".");
+            Console.WriteLine("-----  With a finish that is: ");
+            Console.WriteLine("-----  " + _color + ".");
+            Console.WriteLine("-----  Starting Price: $" + Price + ".");
 
+            return "***** Serial Number:  " + serial + " *****";
+        }
     }
 }

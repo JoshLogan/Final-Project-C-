@@ -9,7 +9,7 @@ namespace WAGFactory
 {
     public class LargeWidget : AbstractWidget
     {
-        private string _gearParts = " 9 Gears,";
+        private string _gearParts = "9 Gears,";
         private string _springParts = " 4 Springs.";
         private string _leverParts = " 2 Levers,";
         public string serial { get; private set; }
@@ -41,10 +41,13 @@ namespace WAGFactory
 
         public override string ToString()
         {
-            Console.WriteLine("The Large Widget contains " + _gearParts + _leverParts + _springParts + ".");
-            Console.WriteLine("With a finish that is " + _color + ".");
-            Console.WriteLine("Priced at $" + Price + ".");
-            return " Serial Number:  " + serial;
+            Console.WriteLine("The Large Wisget contains: ");
+            Console.WriteLine("-----  "+ _gearParts + _leverParts + _springParts);
+            Console.WriteLine("-----  With a finish that is: ");
+            Console.WriteLine("-----  " + _color + ".");
+            Console.WriteLine("-----  Starting Price: $" + Price + ".");
+
+            return "***** Serial Number:  " + serial + " *****";
 
         }
     }
